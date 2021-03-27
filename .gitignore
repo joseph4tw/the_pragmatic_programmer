@@ -102,3 +102,6 @@ dist
 
 # TernJS port file
 .tern-port
+
+# repo-specific
+ch3-challenge-address-book/addresses.json
