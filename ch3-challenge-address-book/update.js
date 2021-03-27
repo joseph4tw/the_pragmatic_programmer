@@ -17,7 +17,7 @@ function update(args) {
     const data = addressFileManager.read();
 
     if (data.length === 0) {
-      log(`Found 0 records to update.`);
+      log(chalk.red(`Found 0 records to update.`));
       return;
     }
 
@@ -25,11 +25,12 @@ function update(args) {
     const updateRecord = data.find((_) => _.id === id);
 
     if (!updateRecord) {
-      log(`Found 0 records to update.`);
+      log(chalk.red(`Found 0 records to update.`));
       return;
     }
 
     updateRecord.address = args['--address'];
+    updateRecord.lastModified = new Date();
 
     addressFileManager.write(data);
 

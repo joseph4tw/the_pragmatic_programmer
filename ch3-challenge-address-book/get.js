@@ -18,7 +18,7 @@ function get(args) {
     }
 
     if (!filter) {
-      log(chalk.green(`Found ${data.length} records:`));
+      log(chalk.green(`Found ${data.length} record(s):`));
       log();
       log(chalk.green(JSON.stringify(data, null, 2)));
       return;
@@ -26,7 +26,7 @@ function get(args) {
 
     let result = data.filter((_) => _.name.toLowerCase() === filter.toLowerCase());
 
-    log(chalk.green(`Found ${result.length} records:`));
+    log(chalk.green(`Found ${result.length} record(s):`));
     log();
     log(chalk.green(JSON.stringify(result, null, 2)));
     return;

@@ -4,6 +4,7 @@ const add = require('./add');
 const arg = require('arg');
 const get = require('./get');
 const update = require('./update');
+const remove = require('./remove');
 const version = '1.0.0';
 
 const args = arg({
@@ -61,5 +62,10 @@ if (args['--get']) {
 
 if (args['--update']) {
   update(args);
+  return;
+}
+
+if (args['--delete']) {
+  remove(args);
   return;
 }

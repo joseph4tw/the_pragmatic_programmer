@@ -17,14 +17,19 @@ function add(args) {
       id++;
     }
 
-    data.push({
+    const record = {
       id,
       name: args['--name'],
       address: args['--address'],
       lastModified: new Date()
-    });
+    };
+
+    data.push(record);
 
     addressFileManager.write(data);
+
+    log(chalk.green(`Added 1 record:`));
+    log(chalk.green(JSON.stringify(record, null, 2)));
   } catch (error) {
     log(chalk.red(`Error: ${error.message}`));
   }
