@@ -104,4 +104,4 @@ dist
 .tern-port
 
 # repo-specific
-ch3-challenge-address-book/addresses.json
+addresses.json
