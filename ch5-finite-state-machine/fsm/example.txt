@@ -1,0 +1,4 @@
+"this is some text"
+"ignore \"quotes\""
+another string "only include this" result
+example "with not one", but "two items" to inclue
