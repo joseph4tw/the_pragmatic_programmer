@@ -7,3 +7,6 @@ From the book [The Pragmatic Programmer](https://amzn.to/3gn2s2m):
 > initialized by passing in a table of transitions and an initial state.
 >
 > Try implementing the string extractor that way.
+
+After implementing this, I realize that Redux's reducers are essentially
+an implementation of a finite state machine.
